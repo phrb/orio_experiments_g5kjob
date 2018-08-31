@@ -12,4 +12,4 @@ ssh -T git@github.com
 
 echo "Allocating machines"
 
-oarsub -q production -p "cluster='graoully'" -l nodes=4,walltime=3 -I
+oarsub -q production -p "cluster='graoully'" -l nodes=4,walltime=3 ./job.sh
