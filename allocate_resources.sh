@@ -2,13 +2,6 @@
 
 CLONE_TARGET="/home/pbruel/dlmt_spapt_experiments"
 
-echo "Setting up ssh-agent and keys"
-echo "Remember to set ForwardAgent to yes"
-
-eval $(ssh-agent)
-ssh-add
-ssh-add -L
-
 echo "Testing connectivity to GitHub"
 ssh -T git@github.com
 
