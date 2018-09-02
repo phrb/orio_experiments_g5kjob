@@ -14,5 +14,7 @@ git clone https://github.com/phrb/dlmt_spapt_experiments.git
 cd $APP_TARGET
 ./run_multiple.sh 1 stencil3d.src1_linear.c
 
-sudo "mkdir -p ${USR_TARGET}" -c ${USR}
-su "mv ${APP_TARGET}/${NODE_NAME} ${USR_TARGET}" -c ${USR}
+mv ${APP_TARGET}/${NODE_NAME} /tmp/
+
+su ${USR} -c "mkdir -p ${USR_TARGET}"
+su ${USR} -c "mv /tmp/${APP_TARGET}/${NODE_NAME} ${USR_TARGET}"
