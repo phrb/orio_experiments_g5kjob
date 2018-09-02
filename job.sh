@@ -9,10 +9,10 @@ apt-get install -y python-rpy2 r-cran-car
 Rscript -e 'install.packages("AlgDesign", repos="https://cran.rstudio.com")'
 pip install dataset
 
-git clone git@github.com:phrb/dlmt_spapt_experiments.git
+git clone https://github.com/phrb/dlmt_spapt_experiments.git
 
 cd $APP_TARGET
 ./run_multiple.sh 1 stencil3d.src1_linear.c
 
-sudo -u ${USR} mkdir -p ${USR_TARGET}
-sudo -u ${USR} mv ${APP_TARGET}/${NODE_NAME} ${USR_TARGET}
+sudo "mkdir -p ${USR_TARGET}" -c ${USR}
+su "mv ${APP_TARGET}/${NODE_NAME} ${USR_TARGET}" -c ${USR}
