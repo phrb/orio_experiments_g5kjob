@@ -2,6 +2,7 @@
 
 eval $(ssh-agent)
 ssh-add
+ssh-add -L
 ssh -T git@github.com
 
 cd orio_experiments/testsuite/SPAPT/stencil3d
