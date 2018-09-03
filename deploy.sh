@@ -1,6 +1,6 @@
 #! /bin/bash
 
-JOB_SCRIPT="/home/pbruel/orio_experiments_g5kjob/job.sh"
+JOB_SCRIPT="/home/pbruel/orio_experiments_g5kjob/job_stencil3d.sh"
 
 echo "Deploying orio_experiments image"
 

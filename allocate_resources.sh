@@ -13,6 +13,6 @@ else
     git clone git@github.com:phrb/dlmt_spapt_experiments.git ${CLONE_TARGET}
 fi
 
-echo "Allocating machines on 'grisou'"
+echo "Allocating machines"
 
-oarsub -I -q production -p "cluster='graoully'" -l nodes=2,walltime=4 -t deploy
+oarsub -I -q production -p "cluster='graoully'" -l nodes=9,walltime=8 -t deploy
