@@ -15,4 +15,4 @@ fi
 
 echo "Allocating machines on 'grisou'"
 
-oarsub -I -q production -p "cluster='graoully'" -l nodes=1,walltime=3 -t deploy
+oarsub -I -q production -p "cluster='graoully'" -l nodes=2,walltime=4 -t deploy
