@@ -6,13 +6,13 @@ pip install dataset
 
 git clone https://github.com/phrb/dlmt_spapt_experiments.git
 
+APP_TARGET="/root/dlmt_spapt_experiments/orio/testsuite/SPAPT/atax"
 cd $APP_TARGET
 
 #./run_multiple.sh 1 atax2.src1.c
 ./run_multiple.sh 1 atax2.src1_random.c
 
 USR="pbruel"
-APP_TARGET="/root/dlmt_spapt_experiments/orio/testsuite/SPAPT/atax"
 USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/atax"
 NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
 
