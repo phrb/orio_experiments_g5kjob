@@ -7,7 +7,6 @@ pip install dataset
 git clone https://github.com/phrb/dlmt_spapt_experiments.git
 
 APP_TARGET="/root/dlmt_spapt_experiments/orio/testsuite/SPAPT/stencil3d"
-
 cd $APP_TARGET
 
 #./run_multiple.sh 1 stencil3d.src1_linear.c
