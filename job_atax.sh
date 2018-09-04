@@ -9,7 +9,7 @@ git clone https://github.com/phrb/dlmt_spapt_experiments.git
 APP_TARGET="/root/dlmt_spapt_experiments/orio/testsuite/SPAPT/atax"
 cd $APP_TARGET
 
-#./run_multiple.sh 1 atax2.src1.c
+./run_multiple.sh 1 atax2.src1.c
 ./run_multiple.sh 1 atax2.src1_random.c
 
 USR="pbruel"
