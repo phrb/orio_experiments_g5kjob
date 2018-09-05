@@ -1,6 +1,6 @@
 #! /bin/bash
 
-JOB_SCRIPT="/home/pbruel/orio_experiments_g5kjob/job_atax.sh"
+JOB_SCRIPT="/home/pbruel/orio_experiments_g5kjob/$1"
 
 echo "Deploying orio_experiments image"
 
