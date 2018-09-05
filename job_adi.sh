@@ -28,24 +28,24 @@ cp -r ${APP_TARGET}/${NODE_NAME}_* /tmp/
 su ${USR} -c "mkdir -p ${USR_TARGET}"
 su ${USR} -c "cp -r /tmp/${NODE_NAME}_* ${USR_TARGET}"
 
-./run_multiple.sh 1 adi.ancc.src1_random.c
-
-USR="pbruel"
-USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/adi"
-NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
-
-cp -r ${APP_TARGET}/${NODE_NAME}_* /tmp/
-
-su ${USR} -c "mkdir -p ${USR_TARGET}"
-su ${USR} -c "cp -r /tmp/${NODE_NAME}_* ${USR_TARGET}"
-
-./run_multiple.sh 1 adi.ancc.src1_sima.c
-
-USR="pbruel"
-USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/adi"
-NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
-
-cp -r ${APP_TARGET}/${NODE_NAME}_* /tmp/
-
-su ${USR} -c "mkdir -p ${USR_TARGET}"
-su ${USR} -c "cp -r /tmp/${NODE_NAME}_* ${USR_TARGET}"
+#./run_multiple.sh 1 adi.ancc.src1_random.c
+#
+#USR="pbruel"
+#USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/adi"
+#NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
+#
+#cp -r ${APP_TARGET}/${NODE_NAME}_* /tmp/
+#
+#su ${USR} -c "mkdir -p ${USR_TARGET}"
+#su ${USR} -c "cp -r /tmp/${NODE_NAME}_* ${USR_TARGET}"
+#
+#./run_multiple.sh 1 adi.ancc.src1_sima.c
+#
+#USR="pbruel"
+#USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/adi"
+#NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
+#
+#cp -r ${APP_TARGET}/${NODE_NAME}_* /tmp/
+#
+#su ${USR} -c "mkdir -p ${USR_TARGET}"
+#su ${USR} -c "cp -r /tmp/${NODE_NAME}_* ${USR_TARGET}"
