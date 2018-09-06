@@ -4,7 +4,15 @@ apt-get install -y python-rpy2 r-cran-car
 Rscript -e 'install.packages("AlgDesign", repos="https://cran.rstudio.com")'
 pip install dataset
 
-git clone https://github.com/phrb/dlmt_spapt_experiments.git
+CLONE_TARGET="/root/dlmt_spapt_experiments"
+
+echo "Updating target data directory"
+
+if [ -d "$CLONE_TARGET" ]; then
+    git -C ${CLONE_TARGET} pull
+else
+    git clone https://github.com/phrb/dlmt_spapt_experiments.git
+fi
 
 APP_TARGET="/root/dlmt_spapt_experiments/orio/testsuite/SPAPT/gemver"
 cd $APP_TARGET
