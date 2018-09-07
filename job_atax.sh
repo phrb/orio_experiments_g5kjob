@@ -34,10 +34,10 @@ su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
 # USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/atax"
 # NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
 # 
-# cp -r ${APP_TARGET}/${NODE_NAME}_* /tmp/
+# mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
 # 
 # su ${USR} -c "mkdir -p ${USR_TARGET}"
-# su ${USR} -c "cp -r /tmp/${NODE_NAME}_* ${USR_TARGET}"
+# su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
 # 
 # ./run_multiple.sh 1 atax2.src0_sima.c
 # 
@@ -45,7 +45,7 @@ su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
 # USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/atax"
 # NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
 # 
-# cp -r ${APP_TARGET}/${NODE_NAME}_* /tmp/
+# mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
 # 
 # su ${USR} -c "mkdir -p ${USR_TARGET}"
-# su ${USR} -c "cp -r /tmp/${NODE_NAME}_* ${USR_TARGET}"
+# su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
