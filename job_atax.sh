@@ -29,23 +29,23 @@ su ${USR} -c "mkdir -p ${USR_TARGET}"
 su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
 
 # ./run_multiple.sh 1 atax2.src0_random.c
-# 
+#
 # USR="pbruel"
 # USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/atax"
 # NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
-# 
+#
 # mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
-# 
+#
 # su ${USR} -c "mkdir -p ${USR_TARGET}"
 # su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
-# 
+#
 # ./run_multiple.sh 1 atax2.src0_sima.c
-# 
+#
 # USR="pbruel"
 # USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/atax"
 # NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
-# 
+#
 # mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
-# 
+#
 # su ${USR} -c "mkdir -p ${USR_TARGET}"
 # su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
