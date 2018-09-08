@@ -17,10 +17,10 @@ fi
 APP_TARGET="/root/dlmt_spapt_experiments/orio/testsuite/SPAPT/atax"
 cd $APP_TARGET
 
-./run_multiple.sh 1 atax2.src0.c
+./run_multiple.sh 1 atax2.src1.c
 
 USR="pbruel"
-USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/atax"
+USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/atax1_8_steps"
 NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
 
 mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
@@ -28,24 +28,46 @@ mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
 su ${USR} -c "mkdir -p ${USR_TARGET}"
 su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
 
-# ./run_multiple.sh 1 atax2.src0_random.c
-#
+# ./run_multiple.sh 3 atax2.src1_random.c
+# 
 # USR="pbruel"
 # USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/atax"
 # NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
-#
+# 
 # mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
-#
+# 
 # su ${USR} -c "mkdir -p ${USR_TARGET}"
 # su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
-#
-# ./run_multiple.sh 1 atax2.src0_sima.c
-#
+# 
+# ./run_multiple.sh 3 atax2.src1_sima.c
+# 
 # USR="pbruel"
 # USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/atax"
 # NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
-#
+# 
 # mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
-#
+# 
+# su ${USR} -c "mkdir -p ${USR_TARGET}"
+# su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
+# 
+# ./run_multiple.sh 3 atax2.src1_rsl.c
+# 
+# USR="pbruel"
+# USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/atax"
+# NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
+# 
+# mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
+# 
+# su ${USR} -c "mkdir -p ${USR_TARGET}"
+# su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
+# 
+# ./run_multiple.sh 3 atax2.src1_simp.c
+# 
+# USR="pbruel"
+# USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/atax"
+# NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
+# 
+# mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
+# 
 # su ${USR} -c "mkdir -p ${USR_TARGET}"
 # su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
