@@ -17,10 +17,10 @@ fi
 APP_TARGET="/root/dlmt_spapt_experiments/orio/testsuite/SPAPT/adi"
 cd $APP_TARGET
 
-./run_multiple.sh 1 adi.ancc.src4.c
+./run_multiple.sh 1 adi.ancc.src1.c
 
 USR="pbruel"
-USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/adi4"
+USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/tests/adi/adi1_cubic_quad_big_model"
 NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
 
 mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
