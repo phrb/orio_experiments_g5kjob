@@ -15,7 +15,7 @@ else
 fi
 
 USR="pbruel"
-USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/tests/atax/atax_1_step_4x_lin_bin_quad_others"
+USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/tests/atax/atax_1_step_4x_lin_quad_no_extra"
 NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
 
 APP_TARGET="/root/dlmt_spapt_experiments/orio/testsuite/SPAPT/atax"
