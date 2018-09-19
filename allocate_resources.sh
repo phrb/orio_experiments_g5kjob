@@ -15,4 +15,4 @@ fi
 
 echo "Allocating machines"
 
-oarsub -I -q default -p "cluster='parasilo'" -l nodes=10,walltime=12 -t deploy
+oarsub -I -q default -p "cluster='parasilo'" -l nodes=10,walltime=8 -t deploy
