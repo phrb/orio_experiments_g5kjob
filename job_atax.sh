@@ -11,7 +11,7 @@ echo "Updating target data directory"
 if [ -d "$CLONE_TARGET" ]; then
     git -C ${CLONE_TARGET} pull
 else
-    git clone https://github.com/phrb/dlmt_spapt_experiments.git
+    git clone --depth 1 https://github.com/phrb/dlmt_spapt_experiments.git
 fi
 
 USR="pbruel"
