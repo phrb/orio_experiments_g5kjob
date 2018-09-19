@@ -28,9 +28,9 @@ mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
 su ${USR} -c "mkdir -p ${USR_TARGET}"
 su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
 
-#./run_multiple.sh 1 stencil3d_random.c
-#
-#cp -r ${APP_TARGET}/${NODE_NAME}_* /tmp/
-#
-#su ${USR} -c "mkdir -p ${USR_TARGET}"
-#su ${USR} -c "cp -r /tmp/${NODE_NAME}_* ${USR_TARGET}"
+./run_multiple.sh 1 stencil3d_random.c
+
+cp -r ${APP_TARGET}/${NODE_NAME}_* /tmp/
+
+su ${USR} -c "mkdir -p ${USR_TARGET}"
+su ${USR} -c "cp -r /tmp/${NODE_NAME}_* ${USR_TARGET}"
