@@ -15,7 +15,7 @@ else
 fi
 
 USR="pbruel"
-USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/tests/dgemv3/dgemv3_4_steps_lin_quad"
+USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/tests/dgemv3/dgemv3_4_steps_lin_quad_true"
 NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
 
 APP_TARGET="/root/dlmt_spapt_experiments/orio/testsuite/SPAPT/dgemv3"
