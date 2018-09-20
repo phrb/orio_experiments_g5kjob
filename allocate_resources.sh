@@ -15,4 +15,4 @@ fi
 
 echo "Allocating machines"
 
-oarsub -q default -p "cluster='grisou'" -l nodes=10,walltime=13 -t deploy -r "2018-09-20 19:00:00"
+oarsub -q default -p "cluster='paravance'" -l nodes=10,walltime=13 -t deploy -r "2018-09-20 19:00:00"
