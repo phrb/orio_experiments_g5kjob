@@ -15,7 +15,7 @@ else
 fi
 
 USR="pbruel"
-USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/tests/dgemv3/dgemv3_4_steps_lin_quad_true"
+USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/results/dgemv3"
 NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
 
 APP_TARGET="/root/dlmt_spapt_experiments/orio/testsuite/SPAPT/dgemv3"
@@ -28,9 +28,9 @@ mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
 su ${USR} -c "mkdir -p ${USR_TARGET}"
 su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
 
-#./run_multiple.sh 1 dgemv_random.c
-#
-#mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
-#
-#su ${USR} -c "mkdir -p ${USR_TARGET}"
-#su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
+./run_multiple.sh 1 dgemv_random.c
+
+mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
+
+su ${USR} -c "mkdir -p ${USR_TARGET}"
+su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
