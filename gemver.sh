@@ -11,30 +11,26 @@ echo "Updating target data directory"
 if [ -d "$CLONE_TARGET" ]; then
     git -C ${CLONE_TARGET} pull
 else
-    git clone https://github.com/phrb/dlmt_spapt_experiments.git
+    git clone --depth 1 https://github.com/phrb/dlmt_spapt_experiments.git
 fi
+
+USR="pbruel"
+USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/results/gemver"
+NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
 
 APP_TARGET="/root/dlmt_spapt_experiments/orio/testsuite/SPAPT/gemver"
 cd $APP_TARGET
 
-./run_multiple.sh 1 dgemv.ancc.src1.c
+./run_multiple.sh 1 gemver.c
 
-USR="pbruel"
-USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/gemver"
-NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
-
-cp -r ${APP_TARGET}/${NODE_NAME}_* /tmp/
+mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
 
 su ${USR} -c "mkdir -p ${USR_TARGET}"
-su ${USR} -c "cp -r /tmp/${NODE_NAME}_* ${USR_TARGET}"
+su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
 
-./run_multiple.sh 1 dgemv.ancc.src1_random.c
+./run_multiple.sh 1 gemver_random.c
 
-USR="pbruel"
-USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/gemver"
-NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
-
-cp -r ${APP_TARGET}/${NODE_NAME}_* /tmp/
+mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
 
 su ${USR} -c "mkdir -p ${USR_TARGET}"
-su ${USR} -c "cp -r /tmp/${NODE_NAME}_* ${USR_TARGET}"
+su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
