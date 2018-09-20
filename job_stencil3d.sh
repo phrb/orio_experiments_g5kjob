@@ -18,19 +18,19 @@ APP_TARGET="/root/dlmt_spapt_experiments/orio/testsuite/SPAPT/stencil3d"
 cd $APP_TARGET
 
 USR="pbruel"
-USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/tests/stencil3d/stencil3d_3x_4_steps_lin"
+USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/results/stencil3d"
 NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
 
-#./run_multiple.sh 1 stencil3d.c
-#
-#mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
-#
-#su ${USR} -c "mkdir -p ${USR_TARGET}"
-#su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
-#
-./run_multiple.sh 1 stencil3d_random.c
+./run_multiple.sh 1 stencil3d.c
 
-cp -r ${APP_TARGET}/${NODE_NAME}_* /tmp/
+mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
 
 su ${USR} -c "mkdir -p ${USR_TARGET}"
-su ${USR} -c "cp -r /tmp/${NODE_NAME}_* ${USR_TARGET}"
+su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
+
+./run_multiple.sh 1 stencil3d_random.c
+
+mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
+
+su ${USR} -c "mkdir -p ${USR_TARGET}"
+su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
