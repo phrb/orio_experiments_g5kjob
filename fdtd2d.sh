@@ -11,11 +11,11 @@ echo "Updating target data directory"
 if [ -d "$CLONE_TARGET" ]; then
     git -C ${CLONE_TARGET} pull
 else
-    git clone https://github.com/phrb/dlmt_spapt_experiments.git
+    git clone --depth 1 https://github.com/phrb/dlmt_spapt_experiments.git
 fi
 
 USR="pbruel"
-USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/tests/fdtd/fdtd_3x_lin_cub_quad"
+USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/results/fdtd"
 NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
 
 APP_TARGET="/root/dlmt_spapt_experiments/orio/testsuite/SPAPT/fdtd"
