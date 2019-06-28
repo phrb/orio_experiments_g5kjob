@@ -15,7 +15,7 @@ else
 fi
 
 USR="pbruel"
-USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/tests/threshold_0.01_2x_nocube/bicgkernel"
+USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/tests/threshold_0.01_4x_linear/bicgkernel"
 NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
 
 APP_TARGET="/root/dlmt_spapt_experiments/orio/testsuite/SPAPT/bicgkernel"
