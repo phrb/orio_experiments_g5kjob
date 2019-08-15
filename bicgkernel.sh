@@ -21,7 +21,8 @@ NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
 APP_TARGET="/root/dlmt_spapt_experiments/orio/testsuite/SPAPT/bicgkernel"
 cd $APP_TARGET
 
-./run_multiple.sh 1 bicgkernel.c
+#./run_multiple.sh 1 bicgkernel.c
+./run_multiple.sh 1 bicgkernel_no_binary.c
 
 mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
 
