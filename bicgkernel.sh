@@ -1,7 +1,7 @@
 #! /bin/bash
 
 apt-get install -y python-rpy2 r-cran-car
-Rscript -e 'install.packages(c("AlgDesign", "rsm"), repos="https://cran.rstudio.com")'
+Rscript -e 'install.packages(c("AlgDesign", "rsm", "dplyr"), repos="https://cran.rstudio.com")'
 pip install dataset
 
 CLONE_TARGET="/root/dlmt_spapt_experiments"
@@ -15,7 +15,7 @@ else
 fi
 
 USR="pbruel"
-USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/tests/threshold_0.01_16x_nocube/bicgkernel"
+USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/tests/reuse_data_binfalse_dlmt/bicgkernel"
 NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
 
 APP_TARGET="/root/dlmt_spapt_experiments/orio/testsuite/SPAPT/bicgkernel"
