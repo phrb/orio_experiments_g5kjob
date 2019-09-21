@@ -15,6 +15,11 @@ fi
 
 echo "Allocating machines"
 
+# Rennes
+
 #oarsub -q default -p "cluster='grisou'" -l nodes=9,walltime=14 -t deploy -r "2018-09-21 19:00:00"
 #oarsub -I -q default -p "cluster='paravance'" -l nodes=10,walltime=12 -t deploy
-oarsub -I -q production -p "cluster='graoully'" -l nodes=10,walltime=48 -t deploy
+#oarsub -I -q default -p "cluster='parasilo'" -l nodes=9,walltime=8 -t deploy
+#oarsub -I -q production -p "cluster='graoully'" -l nodes=10,walltime=48 -t deploy
+#oarsub -I -q default -p "cluster='paravance'" -l nodes=30,walltime=6 -t deploy
+oarsub -I -q default -p "cluster='parasilo'" -l nodes=20,walltime=6 -t deploy
