@@ -15,13 +15,13 @@ else
 fi
 
 USR="pbruel"
-USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/tests/reuse_data_binfalse_dlmt/bicgkernel"
+USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/tests/reuse_prune_sample_data_dlmt/bicgkernel"
 NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
 
 APP_TARGET="/root/dlmt_spapt_experiments/orio/testsuite/SPAPT/bicgkernel"
 cd $APP_TARGET
 
-#./run_multiple.sh 1 bicgkernel.c
+# ./run_multiple.sh 1 bicgkernel.c
 ./run_multiple.sh 1 bicgkernel_no_binary.c
 
 mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
@@ -29,9 +29,9 @@ mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
 su ${USR} -c "mkdir -p ${USR_TARGET}"
 su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
 
-#./run_multiple.sh 1 bicgkernel_random.c
-#
-#mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
-#
-#su ${USR} -c "mkdir -p ${USR_TARGET}"
-#su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
+# ./run_multiple.sh 1 bicgkernel_random_no_binary.c
+# 
+# mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
+# 
+# su ${USR} -c "mkdir -p ${USR_TARGET}"
+# su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
