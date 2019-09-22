@@ -1,7 +1,7 @@
 #! /bin/bash
 
 apt-get install -y python-rpy2 r-cran-car
-Rscript -e 'install.packages(c("AlgDesign", "rsm", "dplyr"), repos="https://cran.rstudio.com")'
+Rscript -e 'install.packages(c("AlgDesign", "rsm", "dplyr", "quantreg"), repos="https://cran.rstudio.com")'
 pip install dataset
 
 CLONE_TARGET="/root/dlmt_spapt_experiments"
