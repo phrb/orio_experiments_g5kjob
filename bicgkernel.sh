@@ -23,7 +23,8 @@ cd $APP_TARGET
 
 # ./run_multiple.sh 1 bicgkernel.c
 # ./run_multiple.sh 1 bicgkernel_no_binary.c
-./run_multiple.sh 1 bicgkernel_gpr.c
+# ./run_multiple.sh 1 bicgkernel_gpr.c
+./run_multiple.sh 1 bicgkernel_random.c
 
 mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
 
