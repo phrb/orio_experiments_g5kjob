@@ -28,9 +28,9 @@ mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
 su ${USR} -c "mkdir -p ${USR_TARGET}"
 su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
 
-./run_multiple.sh 1 tensor_random.c
-
-mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
-
-su ${USR} -c "mkdir -p ${USR_TARGET}"
-su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
+#./run_multiple.sh 1 tensor_random.c
+#
+#mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
+#
+#su ${USR} -c "mkdir -p ${USR_TARGET}"
+#su ${USR} -c "mv /tmp/${NODE_NAME}_* ${USR_TARGET}"
