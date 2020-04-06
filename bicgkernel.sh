@@ -15,7 +15,7 @@ else
 fi
 
 USR="pbruel"
-USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/tests/rs_baseline_19Feb/bicgkernel"
+USR_TARGET="/home/${USR}/dlmt_spapt_experiments/data/tests/scaled_response/bicgkernel"
 NODE_NAME="xeon_e5_2630_v3_$(uname -n | cut -d. -f1)"
 
 APP_TARGET="/root/dlmt_spapt_experiments/orio/testsuite/SPAPT/bicgkernel"
@@ -23,8 +23,8 @@ cd $APP_TARGET
 
 # ./run_multiple.sh 1 bicgkernel.c
 # ./run_multiple.sh 1 bicgkernel_no_binary.c
-# ./run_multiple.sh 1 bicgkernel_gpr.c
-./run_multiple.sh 1 bicgkernel_random.c
+./run_multiple.sh 1 bicgkernel_gpr.c
+# ./run_multiple.sh 1 bicgkernel_random.c
 # ./run_multiple.sh 1 bicgkernel_baseline.c
 
 mv ${APP_TARGET}/${NODE_NAME}_* /tmp/
