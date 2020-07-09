@@ -1,7 +1,9 @@
 #! /bin/bash
 
 apt-get install -y python-rpy2 r-cran-car
-Rscript -e 'install.packages(c("future.apply", "AlgDesign", "rsm", "dplyr", "quantreg", "DiceKriging", "DiceDesign", "DiceOptim", "tibble", "randtoolbox", "stringr", "foreach", "doParallel", "rgenoud"), repos="https://cran.rstudio.com")'
+Rscript -e 'install.packages("devtools", repos="https://cran.rstudio.com")'
+Rscript -e 'install_version("dplyr", version="0.8.5", repos = "http://cran.us.r-project.org")'
+Rscript -e 'install.packages(c("future.apply", "AlgDesign", "rsm", "quantreg", "DiceKriging", "DiceDesign", "DiceOptim", "tibble", "randtoolbox", "stringr", "foreach", "doParallel", "rgenoud"), repos="https://cran.rstudio.com")'
 pip install -Iv dataset==1.1.2
 
 CLONE_TARGET="/root/dlmt_spapt_experiments"
